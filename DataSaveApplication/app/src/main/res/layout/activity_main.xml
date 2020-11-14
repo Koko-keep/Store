@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="600px"
+        android:layout_height="150px"
+        android:hint="请输入密码"
+        android:inputType="textPassword"><!--输入框的类型-->
+        android:maxLength="16"<!--最大的输入长度--></EditText>
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="600px"
+        android:layout_height="150px"></TextView>
+    <Button
+        android:id="@+id/bt_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="保存"></Button>
+    <Button
+        android:id="@+id/bt_reveal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示"></Button>
+    <Button
+        android:id="@+id/bt_sqlite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="创建数据库"></Button>
+    <Button
+        android:id="@+id/bt_addData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加数据"></Button>
+    <Button
+        android:id="@+id/bt_checkData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看数据"></Button>
+</LinearLayout>
