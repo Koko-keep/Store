@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="15dp"
+    android:background="@drawable/scenery"
+    android:orientation="vertical"
+    android:id="@+id/video">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="央视天气预报"
+        android:layout_margin="20dp"
+        android:textSize="30dp"
+        android:textColor="#fff"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关注每日实时天气"
+        android:textSize="20dp"
+        android:layout_marginTop="-22dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#fff"/>
+    
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_"
+        android:src="@drawable/mo"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

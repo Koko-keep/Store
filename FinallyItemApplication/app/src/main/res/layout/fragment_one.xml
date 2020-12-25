@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_one">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="订单配送流程：下单＞商家出餐＞运送到校门＞配送员接单＞完成送达(如遇无配送员接单请及时联系商家催单)\n营业时间:10：00-21：30"
+        android:textSize="20dp"
+        android:textColor="#FF0000"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/tv"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="首页"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:padding="10dp"></TextView>
+    <ListView
+        android:id="@+id/Lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_marginLeft="10dp"/>
+
+</RelativeLayout>

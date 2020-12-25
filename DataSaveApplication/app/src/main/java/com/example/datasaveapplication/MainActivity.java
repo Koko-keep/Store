@@ -2,6 +2,7 @@ package com.example.datasaveapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import org.litepal.crud.DataSupport;
 import org.litepal.tablemanager.Connector;
 
+import java.net.URL;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -59,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 Connector.getDatabase();
             }
         });
-        bt_addData.setOnClickListener(new View.OnClickListener() {
+        /*bt_addData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Book book = new Book();
@@ -79,6 +81,42 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("price", book.getPrice()+"");
                 }
             }
-        });
+        });*/
+    }
+    public void onClick(View v){
+        switch (v.getId()){
+            case R.id.bt_addData:
+                addBook("沉默的孩子","王晶",23.5);
+                break;
+            case R.id.bt_checkData:
+                QueryData();
+                break;
+            case R.id.bt_deleteData:
+                deleteData(3);
+            default:break;
+        }
+    }
+    public void addBook(String name,String author,Double price){
+        Book book = new Book();
+        book.setName(name);
+        book.setAuthor(author);
+        book.setPrice(price);
+        book.save();
+    }
+    public void QueryData(){
+        List<Book> list = DataSupport.where("price < ?","6").find(Book.class);
+        for (Book book : list){
+            Log.d("name",book.getName());
+            Log.d("author",book.getAuthor());
+            Log.d("price", book.getPrice()+"");
+        }
+    }
+    public void deleteData(int id){
+        DataSupport.delete(Book.class,id);
+    }
+    public void updateData(Book book){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("name","沉默的Xgp");
+        DataSupport.update(Book.class,contentValues,4);
     }
 }
